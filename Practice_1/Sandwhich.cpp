@@ -54,6 +54,7 @@ sandwhich addSandwhich(int sandwhichNumber)
 		std::cout << "Your Input: ";
 		std::cin >> userInput;
 		failedInput(userInput); // Used to handle information of the wrong type
+		std::cout << std::endl;
 
 		// Always user to have no condiment or extra
 		if ((userInput == 5) && (i > 1))
@@ -76,6 +77,7 @@ void editSandwhich(sandwhich &userSandwhich)
 	int userInput, desiredIndex;
 	std::string desiredIngredient;
 	std::cout << "What part of the sandwhich do you want to edit:" << std::endl;
+	std::cout << std::endl;
 
 	while(true)
 	{
@@ -100,6 +102,7 @@ void editSandwhich(sandwhich &userSandwhich)
 			case 0:
 				// Editing Bread
 				std::cout << "Bread options: " << std::endl;
+				
 				// Displaying options
 				for (int i = 0; i < MAX_OPTIONS; i++) 
 				{
@@ -240,6 +243,7 @@ void displaySandwhich(const sandwhich userOrder[], const int maxOrder)
 	int userInput;
 
 	std::cout << "Which sandwhich do you want to see details about:" << std::endl;
+	std::cout << std::endl;
 	// Displays all available sandwhiches
 	for (int i = 0; i < maxOrder; i++)
 	{
@@ -267,5 +271,6 @@ void displaySandwhich(const sandwhich userOrder[], const int maxOrder)
 		std::cout << SANDWHICH_COMPONENTS[i] << ": " << userOrder[userInput].components[i] << std::endl;
 	}
 	std::cout << "Price: $" << userOrder[userInput].total << std::endl;
+	std::cout << std::endl;
 
 }

@@ -22,12 +22,13 @@ int main()
 	std::cout << "Hello, thank you for using our sandwhich-building console application today." << std::endl;
 	std::cout << "Each customer is only allowed three sandwhiches for each order." << std::endl;
 	std::cout << "How may we assist you?" << std::endl;
+	std::cout << std::endl;
 
 	// 'Main' menu
 	while (true)
 	{
 		// Options
-		std::cout << std::endl << "[1] Build-a-sandwhich" <<
+		std::cout << "[1] Build-a-sandwhich" <<
 		std::endl << "[2] View a sandwhich" <<
 		std::endl << "[3] View your total" <<
 		std::endl << "[4] Edit a sandwhich" << 
@@ -57,7 +58,6 @@ int main()
 				break;
 			case 2:
 				// View sandwhich
-				std::cout << std::endl;
 				if (numOfSandwhiches == 0)
 				{
 					std::cout << "You have no sandwhiches..." << std::endl;
@@ -68,6 +68,7 @@ int main()
 			case 3:
 				// View total
 				std::cout << "Your total: $" << figureTotal(userOrder, MAX_ORDER) << std::endl;
+				std::cout << std::endl;
 				break;
 			case 4:
 				// Edit sandwhich
@@ -77,7 +78,8 @@ int main()
 					break;
 				}
 				std::cout << "Which sandwhich do you want to edit:" << std::endl;
-				
+				std::cout << std::endl;
+
 				// Displays user's burgers to choose from
 				for (int i = 0; i < MAX_ORDER; i++)
 				{
@@ -87,7 +89,7 @@ int main()
 					}
 					std::cout << "[" << i << "] " << userOrder[i].components[4] << std::endl; // Printing out burger names
 				}
-				
+
 				// Input
 				std::cout << std::endl;
 				std::cout << "Your input: ";
